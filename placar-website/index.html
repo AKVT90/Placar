@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PLACAR — Marcador de ténis de mesa</title>
+  <meta name="description" content="A PLACAR é um marcador de ténis de mesa com histórico de jogos, torneios, estatísticas e ELO. Funciona offline e guarda os dados no teu dispositivo.">
+  <meta name="theme-color" content="#f5f4f0">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <!-- CONFIGURAR: troca SEU-UTILIZADOR/NOME-DO-REPOSITORIO pelo endereço real do site (ver README) -->
+  <link rel="canonical" href="https://SEU-UTILIZADOR.github.io/NOME-DO-REPOSITORIO/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PLACAR — Marcador de ténis de mesa">
+  <meta property="og:description" content="Acompanha jogos, torneios e estatísticas de ténis de mesa. Funciona offline.">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:image" content="https://SEU-UTILIZADOR.github.io/NOME-DO-REPOSITORIO/assets/screenshots/jogo.webp">
+  <meta property="og:image:alt" content="Ecrã de jogo da PLACAR com o resultado dividido em azul e branco">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-score" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M12 5v14M7 12h.01M17 12h.01"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10"/><circle cx="16" cy="7" r="2"/><circle cx="8" cy="17" r="2"/></symbol>
+  <symbol id="i-serve" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></symbol>
+  <symbol id="i-undo" viewBox="0 0 24 24"><path d="M9 14 4 9l5-5M4 9h9a6 6 0 0 1 0 12h-3"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.8a3.5 3.5 0 0 1 0 6.4M18 14.2a6.5 6.5 0 0 1 3.5 5.8"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M7 4h10v5a5 5 0 0 1-10 0zM7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3M12 14v4M8 20h8"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16M8 16v-4M13 16V8M18 16v-7"/></symbol>
+  <symbol id="i-timer" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9.5 2.5h5"/></symbol>
+  <symbol id="i-game" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="11" rx="4"/><path d="M8 10v5M5.5 12.5h5M16 11h.01M18 14h.01"/></symbol>
+  <symbol id="i-archive" viewBox="0 0 24 24"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M4 19h16"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></symbol>
+  <symbol id="i-wifi-off" viewBox="0 0 24 24"><path d="M3 3l18 18M5 10a10 10 0 0 1 4-2.4M19 10a10 10 0 0 0-5-2.7M8.5 14a5 5 0 0 1 2.4-1.3M15.5 14a5 5 0 0 0-1.2-.9M12 18h.01"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+</svg>
+
+<a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+<header class="site-header" id="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="PLACAR — início">
+      <span class="brand-dots" aria-hidden="true"><i></i><i></i></span>PLACAR
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
+      <span></span><span></span>
+    </button>
+    <nav id="nav" class="nav" aria-label="Principal">
+      <a href="#funcionalidades">Funcionalidades</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn--primary btn--sm" href="#downloads">Descarregar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section class="hero">
+    <div class="wrap hero-text">
+      <h1>O teu jogo.<br>O teu marcador.</h1>
+      <p class="lead">Tudo o que precisas para acompanhar os teus jogos de ténis de mesa, treinar e analisar a tua evolução.</p>
+      <div class="cta-row">
+        <a class="btn btn--primary btn--lg" href="#downloads">Descarregar PLACAR</a>
+        <a class="btn btn--ghost btn--lg" href="#funcionalidades">Explorar funcionalidades</a>
+      </div>
+      <p class="compat">Aplicação web instalável · Android, iPhone, iPad e computador · Funciona offline</p>
+    </div>
+    <div class="wrap hero-shot">
+      <figure class="device">
+        <img src="assets/screenshots/jogo.webp" srcset="assets/screenshots/jogo-800.webp 800w, assets/screenshots/jogo.webp 1600w" sizes="(min-width: 1100px) 1040px, 92vw" width="1600" height="1000" fetchpriority="high"
+             alt="Ecrã de jogo da PLACAR: o ecrã dividido em azul e branco mostra o resultado 14–11, os sets ganhos, o cronómetro e os nomes dos jogadores.">
+        <figcaption>Captura real da aplicação, com dados de demonstração.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="funcionalidades" aria-labelledby="t-func">
+    <div class="wrap">
+      <h2 id="t-func" class="section-title">Tudo num só sítio, sem complicar.</h2>
+      <p class="section-sub">Da primeira bola ao histórico da época.</p>
+
+      <div class="group">
+        <div class="group-head"><h3>Jogar</h3><p>Um marcador que se lê de longe e se usa com um toque.</p></div>
+        <ul class="items">
+          <li><svg class="ic"><use href="#i-score"/></svg><div><h4>Pontos e sets</h4><p>Toca em cada metade do ecrã para somar um ponto. Quem serve fica sempre indicado.</p></div></li>
+          <li><svg class="ic"><use href="#i-sliders"/></svg><div><h4>Dois formatos</h4><p>Clássico, com 11 pontos e deuce, ou Personalizado, com 11 ou 21 pontos. Melhor de 3, 5 ou 7.</p></div></li>
+          <li><svg class="ic"><use href="#i-serve"/></svg><div><h4>Serviço automático</h4><p>A troca de serviço segue as regras do formato, com sons distintos para deuce e match point.</p></div></li>
+          <li><svg class="ic"><use href="#i-undo"/></svg><div><h4>Desfazer o último ponto</h4><p>Marcaste o ponto errado? Anula-o, mesmo que tenha fechado o set.</p></div></li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><h3>Competir</h3><p>Jogadores, torneios e o histórico de cada partida.</p></div>
+        <ul class="items">
+          <li><svg class="ic"><use href="#i-users"/></svg><div><h4>Jogadores e cores</h4><p>Cada jogador tem o seu perfil e a sua cor no placar: azul, verde, vermelho ou rosa.</p></div></li>
+          <li><svg class="ic"><use href="#i-trophy"/></svg><div><h4>Torneios</h4><p>Eliminatórias para 4, 8 ou 16 jogadores, com chaveamento automático.</p></div></li>
+          <li><svg class="ic"><use href="#i-list"/></svg><div><h4>Histórico com momentum</h4><p>Consulta cada jogo set a set, com um gráfico que mostra quem dominou, ponto a ponto.</p></div></li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><h3>Evoluir</h3><p>Números para acompanhar a tua progressão.</p></div>
+        <ul class="items">
+          <li><svg class="ic"><use href="#i-chart"/></svg><div><h4>Estatísticas e ELO</h4><p>Vitórias, sets, capotes, confrontos diretos, leaderboard e uma classificação ELO só por diversão.</p></div></li>
+          <li><svg class="ic"><use href="#i-timer"/></svg><div><h4>Modo treino</h4><p>Cronómetro livre ou treino com tempo definido.</p></div></li>
+          <li><svg class="ic"><use href="#i-game"/></svg><div><h4>Mini jogos</h4><p>Toques Rápidos e Memória Visual, com recordes por jogador.</p></div></li>
+        </ul>
+      </div>
+
+      <div class="group">
+        <div class="group-head"><h3>Os teus dados</h3><p>Ficam contigo, no teu dispositivo.</p></div>
+        <ul class="items">
+          <li><svg class="ic"><use href="#i-lock"/></svg><div><h4>Guardado localmente</h4><p>Sem conta, sem servidor e sem envio de dados.</p></div></li>
+          <li><svg class="ic"><use href="#i-archive"/></svg><div><h4>Cópia de segurança</h4><p>Exporta e importa ficheiros JSON, juntando ao que já tens ou substituindo tudo.</p></div></li>
+          <li><svg class="ic"><use href="#i-wifi-off"/></svg><div><h4>Funciona offline</h4><p>Depois de instalada, não precisa de internet.</p></div></li>
+          <li><svg class="ic"><use href="#i-globe"/></svg><div><h4>Sete idiomas</h4><p>Português, inglês, espanhol, francês, alemão, chinês e japonês.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="galeria" aria-labelledby="t-gal">
+    <div class="wrap">
+      <h2 id="t-gal" class="section-title">Vê a PLACAR em ação</h2>
+      <p class="section-sub">Capturas reais da aplicação, com jogadores e jogos de demonstração. Toca numa imagem para ampliar.</p>
+      <ul class="gallery" id="gallery">
+        <li><button type="button" class="shot" data-full="assets/screenshots/jogo.webp" data-caption="O placar durante um jogo: resultado do set, sets ganhos, serviço e cronómetro.">
+          <img src="assets/screenshots/jogo-800.webp" width="800" height="500" loading="lazy" alt="Placar em jogo, ecrã dividido em azul e branco com o resultado 14–11."><span>Placar em jogo</span></button></li>
+        <li><button type="button" class="shot" data-full="assets/screenshots/menu.webp" data-caption="O menu principal: novo jogo, torneio, jogadores, histórico e dados.">
+          <img src="assets/screenshots/menu-800.webp" width="800" height="500" loading="lazy" alt="Menu principal da PLACAR com os botões Novo Jogo, Torneio, Jogadores, Histórico e Dados."><span>Menu principal</span></button></li>
+        <li><button type="button" class="shot" data-full="assets/screenshots/jogadores.webp" data-caption="Leaderboard e perfis de jogadores, com vitórias, derrotas, capotes e ELO.">
+          <img src="assets/screenshots/jogadores-800.webp" width="800" height="500" loading="lazy" alt="Ecrã Jogadores com a tabela dos melhores jogadores e a lista de perfis."><span>Jogadores e leaderboard</span></button></li>
+        <li><button type="button" class="shot" data-full="assets/screenshots/historico.webp" data-caption="O histórico de jogos, com data, formato, resultado em sets e descrição.">
+          <img src="assets/screenshots/historico-800.webp" width="800" height="500" loading="lazy" alt="Ecrã Histórico com a lista dos jogos anteriores e o resultado em sets."><span>Histórico de jogos</span></button></li>
+        <li><button type="button" class="shot" data-full="assets/screenshots/minijogos.webp" data-caption="Mini jogos Toques Rápidos e Memória Visual, com recordes por jogador.">
+          <img src="assets/screenshots/minijogos-800.webp" width="800" height="500" loading="lazy" alt="Ecrã Mini Jogos com os jogos Toques Rápidos e Memória Visual."><span>Mini jogos</span></button></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="sobre" aria-labelledby="t-sobre">
+    <div class="wrap narrow">
+      <h2 id="t-sobre" class="section-title">Feita para a mesa de jogo.</h2>
+      <p class="prose">A PLACAR torna mais simples acompanhar jogos de ténis de mesa, organizar partidas e consultar resultados. Foi pensada para ser usada num tablet na horizontal, ao lado da mesa, mas funciona em qualquer ecrã.</p>
+      <p class="prose">É uma aplicação web instalável: depois de aberta uma vez, funciona offline e guarda tudo no próprio dispositivo.</p>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="downloads" aria-labelledby="t-dl">
+    <div class="wrap">
+      <h2 id="t-dl" class="section-title">A PLACAR, nos teus dispositivos</h2>
+      <p class="section-sub">A PLACAR é uma aplicação web que podes instalar a partir do navegador. Ainda não há instaladores nativos.</p>
+      <div class="dl-grid" id="download-grid"></div>
+      <p id="download-message" class="dl-message" role="status" aria-live="polite" hidden></p>
+      <noscript><p class="dl-message">Ativa o JavaScript para ver as opções de download, ou abre a aplicação diretamente em <a href="https://akvt90.github.io/Ping-Pong-Scoreboard/">akvt90.github.io/Ping-Pong-Scoreboard</a>.</p></noscript>
+    </div>
+  </section>
+
+  <section class="section" id="faq" aria-labelledby="t-faq">
+    <div class="wrap narrow">
+      <h2 id="t-faq" class="section-title">Perguntas frequentes</h2>
+      <!-- CONFIGURAR: edita as respostas conforme a informação real -->
+      <div class="faq">
+        <details><summary>O que é a PLACAR?</summary><p>Um marcador de ténis de mesa com gestão de jogadores, histórico, torneios, estatísticas, treino e mini jogos.</p></details>
+        <details><summary>Em que dispositivos funciona?</summary><p>Em qualquer dispositivo com um navegador moderno. Foi desenhada para tablets Android, mas pode ser instalada no Android, no iPhone e iPad (Safari) e em computadores. Ainda não existem instaladores nativos para Windows ou macOS.</p></details>
+        <details><summary>Como posso instalar a aplicação?</summary><p>Abre a PLACAR no navegador. No Android (Chrome), escolhe «Instalar aplicação» no menu. No iPhone ou iPad (Safari), toca em Partilhar e depois em «Adicionar ao ecrã principal». A partir daí abre pelo ícone e funciona offline.</p></details>
+        <details><summary>A aplicação é gratuita?</summary><p>A versão web pode ser aberta diretamente, sem criar conta. <!-- CONFIGURAR: acrescenta aqui a informação de preço, se aplicável --></p></details>
+        <details><summary>Posso utilizar a aplicação num tablet?</summary><p>Sim. A PLACAR foi pensada para tablets na horizontal. Se rodares o tablet para a vertical durante um jogo, a app avisa-te.</p></details>
+        <details><summary>Os meus dados ficam guardados onde?</summary><p>Apenas no armazenamento local do navegador do teu dispositivo. Podes exportar uma cópia de segurança em JSON no menu «Dados». Faz uma cópia antes de limpares os dados do navegador ou de trocares de dispositivo.</p></details>
+        <details><summary>Como posso obter ajuda?</summary><p>Podes abrir um pedido no <a href="https://github.com/akvt90/Ping-Pong-Scoreboard/issues" target="_blank" rel="noopener noreferrer">repositório da aplicação no GitHub</a>. <!-- CONFIGURAR: troca por um email de contacto, se existir --></p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <div>
+      <p class="brand"><span class="brand-dots" aria-hidden="true"><i></i><i></i></span>PLACAR</p>
+      <p class="fine">Marcador de ténis de mesa. Por AKVT90.</p>
+    </div>
+    <nav aria-label="Rodapé">
+      <a href="#funcionalidades">Funcionalidades</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://github.com/akvt90/Ping-Pong-Scoreboard" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+  </div>
+  <div class="wrap"><p class="fine">© <span id="year">2026</span> PLACAR. Este site não utiliza cookies nem analytics.</p></div>
+</footer>
+
+<dialog id="lightbox" class="lightbox" aria-label="Imagem ampliada">
+  <figure>
+    <img id="lb-img" alt="">
+    <figcaption id="lb-cap"></figcaption>
+  </figure>
+  <button type="button" class="lb-btn lb-close" id="lb-close" aria-label="Fechar">✕</button>
+  <button type="button" class="lb-btn lb-prev" id="lb-prev" aria-label="Imagem anterior">‹</button>
+  <button type="button" class="lb-btn lb-next" id="lb-next" aria-label="Imagem seguinte">›</button>
+</dialog>
+
+<script src="config/downloads.js"></script>
+<script src="js/downloads.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
