@@ -44,6 +44,27 @@
     });
   }
 
+  // GIF do "Support me": nunca desaparece se o carregamento falhar
+  var gifFig = document.querySelector(".support-gif");
+  var gif = gifFig && gifFig.querySelector("img");
+  if (gif) {
+    var triedFallback = false;
+    var onLoaded = function () { gifFig.classList.add("is-loaded"); };
+    var onFailed = function () {
+      if (!triedFallback && gif.dataset.fallback) { triedFallback = true; gif.src = gif.dataset.fallback; return; }
+      gif.hidden = true;
+      if (!gifFig.querySelector(".support-gif-fallback")) {
+        var f = document.createElement("div");
+        f.className = "support-gif-fallback"; f.setAttribute("aria-hidden", "true"); f.textContent = "\u2615";
+        gifFig.appendChild(f);
+      }
+    };
+    gif.addEventListener("load", onLoaded);
+    gif.addEventListener("error", onFailed);
+    // o erro pode já ter acontecido antes deste script correr
+    if (gif.complete && gif.currentSrc) { if (gif.naturalWidth > 0) onLoaded(); else onFailed(); }
+  }
+
   // Galeria com ampliação
   var shots = Array.prototype.slice.call(document.querySelectorAll(".shot"));
   var dlg = document.getElementById("lightbox");

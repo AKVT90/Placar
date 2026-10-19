@@ -46,8 +46,8 @@ As capturas incluídas são **reais**, tiradas à app com jogadores e jogos de d
 - **Triângulo** no canto superior direito da página inicial: abre `https://github.com/AKVT90/Ping-Pong-Scoreboard/releases` (secção `.corner` do `index.html`).
 - **Discord** no cabeçalho: `https://discord.gg/2xwZXc3Myj`.
 - **Support me**: ligação no cabeçalho que leva à secção `#support` (GIF, Buy me a coffee `buymeacoffee.com/akvt90` e PayPal `paypal.me/AKVT777`). Funciona mesmo sem JavaScript.
-- **GIF:** é carregado diretamente do Giphy (precisa de internet). Se o Giphy falhar, a secção mostra só o texto e os links. Para alojar o GIF no repositório, guarda-o em `assets/images/` e troca o `src` na secção `#support` do `index.html`.
-- **Cache:** os ficheiros CSS/JS têm `?v=4` no `index.html`. Se alterares o CSS ou o JS, aumenta o número para forçar os navegadores a descarregar a versão nova.
+- **GIF:** é carregado do Giphy. Se o pedido falhar (por exemplo, bloqueado por uma extensão no computador), o site tenta `assets/images/support.gif` (atributo `data-fallback`) e, se também não existir, mostra um cartão com ☕ em vez de esconder a secção. Para o GIF funcionar em todos os navegadores, guarda-o em `assets/images/support.gif`; para o usar como fonte principal, troca o `src` do `<img>` na secção `#support`.
+- **Cache:** os ficheiros CSS/JS têm `?v=5` no `index.html`. Se alterares o CSS ou o JS, aumenta o número para forçar os navegadores a descarregar a versão nova.
 
 ## Configurar os downloads
 

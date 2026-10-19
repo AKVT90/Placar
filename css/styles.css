@@ -168,8 +168,12 @@ ul{padding:0;list-style:none}
 .support-card{max-width:980px;margin-inline:auto;padding:40px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
 .support-title{font-size:clamp(30px,5vw,44px);line-height:1.1;letter-spacing:-.03em;font-weight:700;text-align:center;margin-bottom:32px}
 .support-body{display:flex;gap:32px;align-items:flex-start}
-.support-gif{flex:0 0 min(46%,420px);margin:0}
-.support-gif img{width:100%;height:auto;display:block;border-radius:12px}
+.support-gif{flex:0 0 min(46%,420px);margin:0;position:relative;overflow:hidden;border-radius:12px;background:#0a0a0a}
+.support-gif:not(.is-loaded){aspect-ratio:4/3}
+.support-gif img{width:100%;height:auto;display:block}
+.support-gif:not(.is-loaded) img{height:100%;object-fit:contain}
+.support-gif img[hidden]{display:none}
+.support-gif-fallback{position:absolute;inset:0;display:grid;place-items:center;font-size:72px;background:var(--tint)}
 .support-text{flex:1;min-width:0;font-size:18px;line-height:1.6;color:var(--ink-2)}
 .support-text ul{margin:16px 0 0;padding-left:24px;list-style:disc}
 .support-text li{margin:8px 0}
