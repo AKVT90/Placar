@@ -17,7 +17,7 @@ placar-website/
 ├── favicon.svg  robots.txt  sitemap.xml
 ```
 
-Todos os caminhos são relativos, por isso o site funciona na raiz ou num subcaminho (`utilizador.github.io/repositorio/`).
+Todos os caminhos do site são relativos. Única exceção: `404.html` usa caminhos absolutos (`/css/...`), corretos para o site na raiz `https://akvt90.github.io/`. Se o mudares para um subcaminho, altera-os.
 
 ## Executar localmente
 
@@ -34,6 +34,13 @@ As capturas incluídas são **reais**, tiradas à app com jogadores e jogos de d
 1. Exporta cada captura em 1600×1000 (`nome.webp`) e 800×500 (`nome-800.webp`) para `assets/screenshots/`, com os mesmos nomes (`jogo`, `menu`, `jogadores`, `historico`, `minijogos`).
 2. Para acrescentar uma imagem, copia um bloco `<li>…</li>` na secção `#galeria` do `index.html` e altera `data-full`, `data-caption`, `src` e `alt`.
 3. Se mudares a legenda «dados de demonstração», faz-o também no hero.
+
+## Estado atual (atualização)
+- Site em **inglês**, com tema escuro igual ao da app.
+- **FAQ** em accordion com botões reais (`aria-expanded`/`aria-controls`), um item aberto de cada vez, teclado (Enter, Espaço, ↑ ↓, Home, End). Edita as perguntas/respostas em `index.html`, secção `#faq`.
+- **Todos os botões de download** (cabeçalho, hero e cartões) abrem `https://akvt90.github.io/Ping-Pong-Scoreboard/`. O endereço está em `config/downloads.js` (`PLACAR_WEB_APP_URL`); o botão do cabeçalho e do hero estão em `index.html`.
+- A app não tem modo de pares; a FAQ di-lo.
+- Para publicar em `akvt90.github.io`, o repositório tem de se chamar `akvt90.github.io` e os ficheiros ficam na raiz.
 
 ## Configurar os downloads
 

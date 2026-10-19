@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# CONFIGURAR: troca pelo endereço real do site
-Sitemap: https://SEU-UTILIZADOR.github.io/NOME-DO-REPOSITORIO/sitemap.xml
+Sitemap: https://akvt90.github.io/sitemap.xml
