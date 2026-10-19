@@ -5,22 +5,6 @@
   var y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
 
-  // Menu "Support me"
-  var sBtn = document.querySelector(".support-toggle");
-  var sPanel = document.getElementById("support-panel");
-  function setSupport(open) {
-    if (!sBtn || !sPanel) return;
-    sBtn.setAttribute("aria-expanded", String(open));
-    sPanel.hidden = !open;
-  }
-  if (sBtn && sPanel) {
-    sBtn.addEventListener("click", function () { setSupport(sBtn.getAttribute("aria-expanded") !== "true"); });
-    document.addEventListener("click", function (e) { if (!e.target.closest(".support")) setSupport(false); });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && !sPanel.hidden) { setSupport(false); sBtn.focus(); }
-    });
-  }
-
   // Menu móvel
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("nav");
@@ -28,12 +12,11 @@
     toggle.setAttribute("aria-expanded", String(open));
     toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     nav.classList.toggle("is-open", open);
-    if (!open) setSupport(false);
   }
   toggle.addEventListener("click", function () { setMenu(toggle.getAttribute("aria-expanded") !== "true"); });
   nav.addEventListener("click", function (e) { if (e.target.closest("a")) setMenu(false); });
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && nav.classList.contains("is-open") && (!sPanel || sPanel.hidden)) { setMenu(false); toggle.focus(); }
+    if (e.key === "Escape" && nav.classList.contains("is-open")) { setMenu(false); toggle.focus(); }
   });
 
   // FAQ em accordion (um item aberto de cada vez)
