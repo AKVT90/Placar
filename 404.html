@@ -6,17 +6,25 @@
   <meta name="robots" content="noindex">
   <meta name="color-scheme" content="dark">
   <title>Page not found — PLACAR</title>
-  <!-- Site served at the domain root (akvt90.github.io), so absolute paths are correct here. -->
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/css/styles.css">
+  <script>
+    /* O GitHub Pages serve esta página em qualquer caminho inexistente do projeto.
+       Define a base (/Placar/) para o CSS e as ligações funcionarem em qualquer profundidade. */
+    (function () {
+      var seg = location.pathname.split("/").filter(Boolean)[0];
+      var base = location.hostname.endsWith("github.io") && seg ? "/" + seg + "/" : "/";
+      document.write('<base href="' + base + '">');
+    })();
+  </script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css?v=6">
 </head>
 <body>
   <main class="nf">
     <div>
-      <a class="brand" href="/"><span class="brand-dots" aria-hidden="true"><i></i><i></i></span>PLACAR</a>
+      <a class="brand" href="./"><span class="brand-dots" aria-hidden="true"><i></i><i></i></span>PLACAR</a>
       <h1>Out of bounds.</h1>
       <p>The page you are looking for does not exist or has moved.</p>
-      <a class="btn btn--primary btn--lg" href="/">Back to home</a>
+      <a class="btn btn--primary btn--lg" href="./">Back to home</a>
     </div>
   </main>
 </body>

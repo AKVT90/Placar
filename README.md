@@ -29,11 +29,9 @@ Abre http://localhost:8000. (Não abras o `index.html` por duplo clique em algun
 
 ## Substituir os screenshots
 
-As capturas incluídas são **reais**, tiradas à app com jogadores e jogos de demonstração (Miguel, Sofia, Rui…). Para usar as tuas:
+As 12 capturas incluídas são **reais**: tiradas à app com a interface em inglês, em 1280×800 com resolução dupla (2560×1600), com jogadores e jogos de demonstração (Alex, Maya, Leo…). Estão em `assets/screenshots/` em dois tamanhos: `nome.webp` (1920×1200, usado ao ampliar e no topo da página) e `nome-960.webp` (miniaturas).
 
-1. Exporta cada captura em 1600×1000 (`nome.webp`) e 800×500 (`nome-800.webp`) para `assets/screenshots/`, com os mesmos nomes (`jogo`, `menu`, `jogadores`, `historico`, `minijogos`).
-2. Para acrescentar uma imagem, copia um bloco `<li>…</li>` na secção `#galeria` do `index.html` e altera `data-full`, `data-caption`, `src` e `alt`.
-3. Se mudares a legenda «dados de demonstração», faz-o também no hero.
+Nomes: `game`, `game-retro`, `colors`, `players`, `profile`, `tournament`, `minigames`, `quiz`, `rules`, `achievements`, `records`, `settings`. Para trocar uma, guarda o ficheiro novo com o mesmo nome nos dois tamanhos. Para acrescentar uma, copia um bloco `<li>…</li>` da secção `#gallery` do `index.html` e altera `data-full`, `data-caption`, `src` e `alt`. A primeira imagem da galeria ocupa duas colunas e duas linhas.
 
 ## Estado atual (atualização)
 - Site em **inglês**, com tema escuro igual ao da app.
@@ -47,7 +45,10 @@ As capturas incluídas são **reais**, tiradas à app com jogadores e jogos de d
 - **Discord** no cabeçalho: `https://discord.gg/2xwZXc3Myj`.
 - **Support me**: ligação no cabeçalho que leva à secção `#support` (GIF, Buy me a coffee `buymeacoffee.com/akvt90` e PayPal `paypal.me/AKVT777`). Funciona mesmo sem JavaScript.
 - **GIF:** é carregado do Giphy. Se o pedido falhar (por exemplo, bloqueado por uma extensão no computador), o site tenta `assets/images/support.gif` (atributo `data-fallback`) e, se também não existir, mostra um cartão com ☕ em vez de esconder a secção. Para o GIF funcionar em todos os navegadores, guarda-o em `assets/images/support.gif`; para o usar como fonte principal, troca o `src` do `<img>` na secção `#support`.
-- **Cache:** os ficheiros CSS/JS têm `?v=5` no `index.html`. Se alterares o CSS ou o JS, aumenta o número para forçar os navegadores a descarregar a versão nova.
+- **Cache:** os ficheiros CSS/JS têm `?v=6` no `index.html`. Se alterares o CSS ou o JS, aumenta o número para forçar os navegadores a descarregar a versão nova.
+
+## Funcionalidades apresentadas (confirmadas no código da app)
+Marcador e formatos Clássico/Personalizado, tema Clássico/Retro, 8 cores de jogador (alteráveis no perfil), torneios de 4/8/16, histórico com momentum, estatísticas e ELO, 47 conquistas e recordes, treino, mini jogos, **regras ITTF** e **quiz de regras** (Fácil/Médio/Difícil, 10 perguntas por ronda), cópia de segurança e 7 idiomas. Não existe modo de pares nem controlos físicos, por isso não são apresentados.
 
 ## Configurar os downloads
 

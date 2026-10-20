@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://akvt90.github.io/sitemap.xml
+Sitemap: https://akvt90.github.io/Placar/sitemap.xml

@@ -9,16 +9,16 @@
   <meta name="color-scheme" content="dark">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
-  <link rel="canonical" href="https://akvt90.github.io/">
+  <link rel="canonical" href="https://akvt90.github.io/Placar/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="PLACAR — Table tennis scoreboard">
   <meta property="og:description" content="Keep score, run tournaments and track your stats. Works offline.">
   <meta property="og:locale" content="en">
-  <meta property="og:url" content="https://akvt90.github.io/">
-  <meta property="og:image" content="https://akvt90.github.io/assets/screenshots/jogo.webp">
+  <meta property="og:url" content="https://akvt90.github.io/Placar/">
+  <meta property="og:image" content="https://akvt90.github.io/Placar/assets/screenshots/game.webp">
   <meta property="og:image:alt" content="PLACAR scoreboard split into blue and white showing the score">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="css/styles.css?v=5">
+  <link rel="stylesheet" href="css/styles.css?v=6">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -36,6 +36,11 @@
   <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></symbol>
   <symbol id="i-wifi-off" viewBox="0 0 24 24"><path d="M3 3l18 18M5 10a10 10 0 0 1 4-2.4M19 10a10 10 0 0 0-5-2.7M8.5 14a5 5 0 0 1 2.4-1.3M15.5 14a5 5 0 0 0-1.2-.9M12 18h.01"/></symbol>
   <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3zM5 17a3 3 0 0 1 3-3h11"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16 9.5"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 1.5-2-.6-1.2.2-2.5 1.6-2.5H17a4 4 0 0 0 4-4c0-5-4-9.5-9-9.5z"/><path d="M7.5 11h.01M10 7.5h.01M14.5 7.5h.01"/></symbol>
+  <symbol id="i-medal" viewBox="0 0 24 24"><circle cx="12" cy="14.5" r="5.5"/><path d="M8.5 9.5 6 3h4l2 4 2-4h4l-2.5 6.5"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
 </svg>
 
 <a class="skip" href="#content">Skip to content</a>
@@ -77,8 +82,8 @@
     </div>
     <div class="wrap hero-shot">
       <figure class="device">
-        <img src="assets/screenshots/jogo.webp" srcset="assets/screenshots/jogo-800.webp 800w, assets/screenshots/jogo.webp 1600w" sizes="(min-width: 1100px) 1040px, 92vw" width="1600" height="1000" fetchpriority="high"
-             alt="PLACAR match screen: the display is split into blue and white and shows the score 14–11, sets won, the timer and the player names.">
+        <img src="assets/screenshots/game.webp" srcset="assets/screenshots/game-960.webp 960w, assets/screenshots/game.webp 1920w" sizes="(min-width: 1100px) 1040px, 92vw" width="1920" height="1200" fetchpriority="high"
+             alt="PLACAR match screen: the display is split into blue and green and shows the score 9–7, sets won, the timer and the player names.">
         <figcaption>Real screenshot of the app, with demo data.</figcaption>
       </figure>
     </div>
@@ -95,12 +100,13 @@
           <li><svg class="ic"><use href="#i-sliders"/></svg><div><h4>Two formats</h4><p>Classic, with 11 points and deuce, or Custom, with 11 or 21 points. Best of 3, 5 or 7.</p></div></li>
           <li><svg class="ic"><use href="#i-serve"/></svg><div><h4>Automatic serving</h4><p>Serve changes follow the rules of the format, with distinct sounds for deuce and match point.</p></div></li>
           <li><svg class="ic"><use href="#i-undo"/></svg><div><h4>Undo the last point</h4><p>Scored by mistake? Take it back, even if it closed the set.</p></div></li>
+          <li><svg class="ic"><use href="#i-monitor"/></svg><div><h4>Classic and Retro looks</h4><p>Switch the scoreboard between the modern design and a retro LED-style display.</p></div></li>
         </ul>
       </div>
       <div class="group">
         <div class="group-head"><h3>Compete</h3><p>Players, tournaments and a record of every match.</p></div>
         <ul class="items">
-          <li><svg class="ic"><use href="#i-users"/></svg><div><h4>Players and colours</h4><p>Every player has a profile and a scoreboard colour: blue, green, red or pink.</p></div></li>
+          <li><svg class="ic"><use href="#i-palette"/></svg><div><h4>Players and eight colours</h4><p>Every player has a profile and a scoreboard colour, which you can change at any time.</p></div></li>
           <li><svg class="ic"><use href="#i-trophy"/></svg><div><h4>Tournaments</h4><p>Knockout brackets for 4, 8 or 16 players, generated automatically.</p></div></li>
           <li><svg class="ic"><use href="#i-list"/></svg><div><h4>History with momentum</h4><p>Review each match set by set, with a chart of who led, point by point.</p></div></li>
         </ul>
@@ -109,8 +115,16 @@
         <div class="group-head"><h3>Improve</h3><p>Numbers to follow your progress.</p></div>
         <ul class="items">
           <li><svg class="ic"><use href="#i-chart"/></svg><div><h4>Statistics and ELO</h4><p>Wins, sets, capotes, head-to-head records, a leaderboard and an ELO rating just for fun.</p></div></li>
+          <li><svg class="ic"><use href="#i-medal"/></svg><div><h4>Achievements and records</h4><p>47 achievements to unlock, plus records such as highest rating and longest win streak.</p></div></li>
           <li><svg class="ic"><use href="#i-timer"/></svg><div><h4>Training mode</h4><p>A free stopwatch or a timed session.</p></div></li>
           <li><svg class="ic"><use href="#i-game"/></svg><div><h4>Mini games</h4><p>Fast Taps and Visual Memory, with records for each player.</p></div></li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="group-head"><h3>Learn the rules</h3><p>The official table tennis rules, always at hand.</p></div>
+        <ul class="items">
+          <li><svg class="ic"><use href="#i-book"/></svg><div><h4>Official ITTF rules</h4><p>A reference of the official rules, organised by topic: service, scoring, equipment, conduct and more.</p></div></li>
+          <li><svg class="ic"><use href="#i-check"/></svg><div><h4>Rules quiz</h4><p>Ten questions per round at Easy, Medium or Hard, with an explanation after every answer.</p></div></li>
         </ul>
       </div>
       <div class="group">
@@ -130,16 +144,30 @@
       <h2 id="t-gal" class="section-title">See PLACAR in action</h2>
       <p class="section-sub">Real screenshots of the app, with demo players and matches. Select an image to enlarge it.</p>
       <ul class="gallery" id="gallery-list">
-        <li><button type="button" class="shot" data-full="assets/screenshots/jogo.webp" data-caption="The scoreboard during a match: set score, sets won, serve and timer.">
-          <img src="assets/screenshots/jogo-800.webp" width="800" height="500" loading="lazy" alt="Scoreboard during a match, split into blue and white with the score 14–11."><span>Match in progress</span></button></li>
-        <li><button type="button" class="shot" data-full="assets/screenshots/menu.webp" data-caption="The main menu: new game, tournament, players, history and data.">
-          <img src="assets/screenshots/menu-800.webp" width="800" height="500" loading="lazy" alt="PLACAR main menu with New Game, Tournament, Players, History and Data buttons."><span>Main menu</span></button></li>
-        <li><button type="button" class="shot" data-full="assets/screenshots/jogadores.webp" data-caption="Leaderboard and player profiles with wins, losses, capotes and ELO.">
-          <img src="assets/screenshots/jogadores-800.webp" width="800" height="500" loading="lazy" alt="Players screen with the top players table and the list of player profiles."><span>Players and leaderboard</span></button></li>
-        <li><button type="button" class="shot" data-full="assets/screenshots/historico.webp" data-caption="Match history with date, format, set score and description.">
-          <img src="assets/screenshots/historico-800.webp" width="800" height="500" loading="lazy" alt="History screen listing previous matches and their set scores."><span>Match history</span></button></li>
-        <li><button type="button" class="shot" data-full="assets/screenshots/minijogos.webp" data-caption="The Fast Taps and Visual Memory mini games, with records per player.">
-          <img src="assets/screenshots/minijogos-800.webp" width="800" height="500" loading="lazy" alt="Mini Games screen with the Fast Taps and Visual Memory games."><span>Mini games</span></button></li>
+        <li><button type="button" class="shot" data-full="assets/screenshots/game.webp" data-caption="The scoreboard during a match: set score, sets won, serve and timer.">
+          <img src="assets/screenshots/game-960.webp" width="960" height="600" loading="lazy" alt="Scoreboard during a match, split into blue and green, with the score 9–7."><span>Match in progress</span></button></li>
+        <li><button type="button" class="shot" data-full="assets/screenshots/game-retro.webp" data-caption="The Retro theme, a red LED-style scoreboard for the same match.">
+          <img src="assets/screenshots/game-retro-960.webp" width="960" height="600" loading="lazy" alt="Retro LED-style scoreboard showing the score 09–07."><span>Retro scoreboard</span></button></li>
+        <li><button type="button" class="shot" data-full="assets/screenshots/colors.webp" data-caption="Pick one of eight scoreboard colours when creating a player, or change it later.">
+          <img src="assets/screenshots/colors-960.webp" width="960" height="600" loading="lazy" alt="New player dialog with a name field and eight scoreboard colour options."><span>A colour for every player</span></button></li>
+        <li><button type="button" class="shot" data-full="assets/screenshots/players.webp" data-caption="The leaderboard and every player's profile, with wins, losses and rating.">
+          <img src="assets/screenshots/players-960.webp" width="960" height="600" loading="lazy" alt="Players screen with the top five leaderboard and the list of player profiles."><span>Players and leaderboard</span></button></li>
+        <li><button type="button" class="shot" data-full="assets/screenshots/profile.webp" data-caption="Games, win rate, sets, capotes and head-to-head records for each player.">
+          <img src="assets/screenshots/profile-960.webp" width="960" height="600" loading="lazy" alt="Player profile with rating, win rate, games, sets and capotes statistics."><span>Player statistics</span></button></li>
+        <li><button type="button" class="shot" data-full="assets/screenshots/tournament.webp" data-caption="A generated bracket for 8 players, from the quarter-finals to the final.">
+          <img src="assets/screenshots/tournament-960.webp" width="960" height="600" loading="lazy" alt="Tournament bracket with quarter-finals, semi-finals and final for eight players."><span>Knockout tournaments</span></button></li>
+        <li><button type="button" class="shot" data-full="assets/screenshots/minigames.webp" data-caption="Fast Taps, Visual Memory, the rules quiz and the ITTF rules, all in one place.">
+          <img src="assets/screenshots/minigames-960.webp" width="960" height="600" loading="lazy" alt="Mini Games screen with Quick Taps, Visual Memory, Rules Quiz and ITTF Rules, and a player picker."><span>Mini games and rules</span></button></li>
+        <li><button type="button" class="shot" data-full="assets/screenshots/quiz.webp" data-caption="Test your knowledge of the official rules, with an explanation after each answer.">
+          <img src="assets/screenshots/quiz-960.webp" width="960" height="600" loading="lazy" alt="Rules quiz question with four answers, the correct one highlighted in green and an explanation."><span>Rules quiz</span></button></li>
+        <li><button type="button" class="shot" data-full="assets/screenshots/rules.webp" data-caption="The official rules, organised by topic and ready to read mid-match.">
+          <img src="assets/screenshots/rules-960.webp" width="960" height="600" loading="lazy" alt="ITTF Rules screen with the General Rules section expanded and other topics collapsed."><span>Official ITTF rules</span></button></li>
+        <li><button type="button" class="shot" data-full="assets/screenshots/achievements.webp" data-caption="Unlock achievements as you play and track your progress.">
+          <img src="assets/screenshots/achievements-960.webp" width="960" height="600" loading="lazy" alt="Achievements screen with a progress bar and unlocked and locked achievements."><span>Achievements</span></button></li>
+        <li><button type="button" class="shot" data-full="assets/screenshots/records.webp" data-caption="Highest rating, longest win streak, most wins and more.">
+          <img src="assets/screenshots/records-960.webp" width="960" height="600" loading="lazy" alt="Records screen listing highest rating, longest streak, most wins and other records."><span>Records</span></button></li>
+        <li><button type="button" class="shot" data-full="assets/screenshots/settings.webp" data-caption="Choose the Classic or Retro look, and export or import a backup of your data.">
+          <img src="assets/screenshots/settings-960.webp" width="960" height="600" loading="lazy" alt="Settings screen with the Classic and Retro theme switch and the export and import backup buttons."><span>Themes and backups</span></button></li>
       </ul>
     </div>
   </section>
@@ -179,7 +207,7 @@
         </div>
         <div class="faq-item">
           <h3><button class="faq-q" type="button" id="faq-q4" aria-expanded="false" aria-controls="faq-a4"><span>Can I track my statistics?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
-          <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><div class="faq-a-inner"><p>Yes. The Players screen shows a top 5 leaderboard by win rate. Each player profile shows games played, win rate, wins, losses and draws, sets won and lost, capotes, best and toughest opponents, head-to-head records and recent games. There is also an ELO rating, just for fun. In History, each set has a momentum chart showing who was ahead, point by point.</p></div></div>
+          <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><div class="faq-a-inner"><p>Yes. The Players screen shows a top 5 leaderboard by win rate. Each player profile shows games played, win rate, wins, losses and draws, sets won and lost, capotes, best and toughest opponents, head-to-head records and recent games. There is also an ELO rating, just for fun. In History, each set has a momentum chart showing who was ahead, point by point. Achievements and records are tracked too.</p></div></div>
         </div>
         <div class="faq-item">
           <h3><button class="faq-q" type="button" id="faq-q5" aria-expanded="false" aria-controls="faq-a5"><span>Does PLACAR have a tournament mode?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
@@ -190,12 +218,16 @@
           <div class="faq-a" id="faq-a6" role="region" aria-labelledby="faq-q6"><div class="faq-a-inner"><p>Yes. Training mode offers a free stopwatch and timed sessions. There are also two mini games, Fast Taps and Visual Memory, with records saved for each player.</p></div></div>
         </div>
         <div class="faq-item">
-          <h3><button class="faq-q" type="button" id="faq-q7" aria-expanded="false" aria-controls="faq-a7"><span>Are there doubles modes?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
-          <div class="faq-a" id="faq-a7" role="region" aria-labelledby="faq-q7"><div class="faq-a-inner"><p>Not at the moment. PLACAR is built for one-on-one matches, with a blue side and a white side. Doubles is not currently available.</p></div></div>
+          <h3><button class="faq-q" type="button" id="faq-q7" aria-expanded="false" aria-controls="faq-a7"><span>Can I learn the official rules?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-a" id="faq-a7" role="region" aria-labelledby="faq-q7"><div class="faq-a-inner"><p>Yes. Under Mini Games you will find ITTF Rules, a reference of the official table tennis rules organised by topic, and a Rules Quiz at Easy, Medium or Hard level. Each round asks ten questions and explains the answer after you pick one.</p></div></div>
         </div>
         <div class="faq-item">
-          <h3><button class="faq-q" type="button" id="faq-q8" aria-expanded="false" aria-controls="faq-a8"><span>Can I customize the experience?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
-          <div class="faq-a" id="faq-a8" role="region" aria-labelledby="faq-q8"><div class="faq-a-inner"><p>Yes. Each player has a colour on the scoreboard (blue, green, red or pink, against white). You can choose points per set and match format, and use the app in seven languages: Portuguese, English, Spanish, French, German, Chinese and Japanese. You can also export and import backups of your data.</p></div></div>
+          <h3><button class="faq-q" type="button" id="faq-q8" aria-expanded="false" aria-controls="faq-a8"><span>Are there doubles modes?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-a" id="faq-a8" role="region" aria-labelledby="faq-q8"><div class="faq-a-inner"><p>Not at the moment. PLACAR is built for one-on-one matches, with a blue side and a white side. Doubles is not currently available.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3><button class="faq-q" type="button" id="faq-q9" aria-expanded="false" aria-controls="faq-a9"><span>Can I customize the experience?</span><span class="faq-icon" aria-hidden="true"></span></button></h3>
+          <div class="faq-a" id="faq-a9" role="region" aria-labelledby="faq-q9"><div class="faq-a-inner"><p>Yes. Each player has one of eight scoreboard colours (blue, green, red, pink, purple, gold, white or orange, each against a contrasting tone) that you can change at any time from the player profile. You can switch the scoreboard between the Classic and Retro looks, choose points per set and match format, and use the app in seven languages: Portuguese, English, Spanish, French, German, Chinese and Japanese. You can also export and import backups of your data.</p></div></div>
         </div>
       </div>
       <noscript><style>.faq-a{grid-template-rows:1fr!important;visibility:visible!important}</style></noscript>
@@ -245,8 +277,8 @@
   <button type="button" class="lb-btn lb-next" id="lb-next" aria-label="Next image">›</button>
 </dialog>
 
-<script src="config/downloads.js?v=5"></script>
-<script src="js/downloads.js?v=5"></script>
-<script src="js/main.js?v=5"></script>
+<script src="config/downloads.js?v=6"></script>
+<script src="js/downloads.js?v=6"></script>
+<script src="js/main.js?v=6"></script>
 </body>
 </html>
